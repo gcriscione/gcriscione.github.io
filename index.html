@@ -1,579 +1,86 @@
 <!doctype html>
 <html lang="it">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Giovanni Criscione - Portfolio</title>
-		<meta
-			name="description"
-			content="Mock portfolio personale: progetti, competenze, esperienza e contatti."
-		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600&display=swap"
-			rel="stylesheet"
-		/>
-		<style>
-			:root {
-				color-scheme: light;
-				--bg: #f6f2ea;
-				--bg-2: #efe6d6;
-				--ink: #1c1a18;
-				--muted: #5b534a;
-				--accent: #c24c2e;
-				--accent-2: #1f6f8b;
-				--card: #fffaf2;
-				--border: #d7c6b0;
-				--shadow: 0 20px 60px rgba(28, 26, 24, 0.12);
-			}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Giovanni Criscione, Full Stack Developer a Pisa. Laurea magistrale in Artificial Intelligence, esperienza nello sviluppo web e nei processi CI/CD.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Giovanni Criscione | Full Stack Developer">
+  <meta property="og:description" content="Esperienza, formazione, competenze e contatti di Giovanni Criscione.">
+  <meta property="og:locale" content="it_IT">
+  <meta name="theme-color" content="#ffffff">
+  <title>Giovanni Criscione | Full Stack Developer</title>
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script defer src="./assets/js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+  <header class="site-header" id="inizio">
+    <div class="wrap header-inner">
+      <a class="brand" href="#inizio" aria-label="Giovanni Criscione, inizio pagina">GC<span>.</span></a>
+      <nav class="nav" id="primary-nav" aria-label="Sezioni del portfolio">
+        <a href="#esperienza">Esperienza</a>
+        <a href="#formazione">Formazione</a>
+        <a href="#competenze">Competenze</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Attiva tema scuro" title="Cambia tema"><span aria-hidden="true">◐</span></button>
+        <button class="icon-button menu-button" id="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Apri menu"><span aria-hidden="true">☰</span></button>
+      </div>
+    </div>
+  </header>
 
-			* {
-				box-sizing: border-box;
-			}
+  <main class="wrap" id="contenuto">
+    <section class="intro" aria-labelledby="intro-title">
+      <p class="eyebrow">FULL STACK DEVELOPER <span aria-hidden="true">·</span> PISA, ITALIA</p>
+      <h1 id="intro-title">Giovanni Criscione<span>.</span></h1>
+      <p class="intro-lead">Sviluppo applicazioni web, dall’interfaccia al rilascio in produzione.</p>
+      <p class="intro-detail">Laureato magistrale in Artificial Intelligence all’Università di Pisa. Ho maturato tre anni di esperienza IT parallelamente agli studi e oggi lavoro come Full Stack Developer in Meew.</p>
+      <div class="intro-actions">
+        <a class="button button-primary" href="mailto:criscioneg16@gmail.com">Scrivimi <span aria-hidden="true">↗</span></a>
+        <a class="button button-secondary" href="./documents/Giovanni_Criscione_CV.pdf" download>Scarica il CV <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="intro-links"><a href="https://github.com/gcriscione" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/giovanni--criscione/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+    </section>
 
-			html,
-			body {
-				margin: 0;
-				padding: 0;
-				font-family: "Space Grotesk", system-ui, -apple-system, sans-serif;
-				color: var(--ink);
-				background: var(--bg);
-			}
+    <section class="content-section" id="esperienza" aria-labelledby="experience-title">
+      <div class="section-head"><span class="section-number">01</span><h2 id="experience-title">Esperienza</h2></div>
+      <div class="entry-list">
+        <article class="entry"><div class="entry-date">2023 — oggi</div><div><h3>Full Stack Developer <span>· Meew</span></h3><p>Sviluppo e manutenzione di applicazioni web con Angular, TypeScript, Java e Spring. Integrazione frontend/backend, CI/CD e deployment, in collaborazione con team e clienti.</p></div></article>
+        <article class="entry"><div class="entry-date">2020 — 2024</div><div><h3>Sviluppatore web indipendente</h3><p>Siti e applicazioni web per clienti privati e progetti personali, gestiti in autonomia.</p></div></article>
+      </div>
+    </section>
 
-			body {
-				min-height: 100vh;
-				background-image: radial-gradient(
-						circle at 15% 15%,
-						rgba(194, 76, 46, 0.16),
-						transparent 40%
-					),
-					radial-gradient(
-						circle at 85% 10%,
-						rgba(31, 111, 139, 0.14),
-						transparent 35%
-					),
-					linear-gradient(120deg, var(--bg), var(--bg-2));
-			}
+    <section class="content-section" id="formazione" aria-labelledby="education-title">
+      <div class="section-head"><span class="section-number">02</span><h2 id="education-title">Formazione</h2></div>
+      <div class="entry-list">
+        <article class="entry"><div class="entry-date">2023 — 2026</div><div><h3>Laurea magistrale in Artificial Intelligence</h3><p>Università di Pisa · Percorso in inglese, completato parallelamente all’attività professionale.</p></div></article>
+        <article class="entry"><div class="entry-date">2020 — 2023</div><div><h3>Laurea triennale in Informatica</h3><p>Università di Pisa · Tirocinio e tesi su una web app per la contabilità aziendale.</p></div></article>
+        <article class="entry"><div class="entry-date">2015 — 2020</div><div><h3>Diploma di Perito Informatico</h3><p>ITIS Galileo Ferraris, Ragusa.</p></div></article>
+      </div>
+    </section>
 
-			a {
-				color: inherit;
-				text-decoration: none;
-			}
+    <section class="content-section" id="competenze" aria-labelledby="skills-title">
+      <div class="section-head"><span class="section-number">03</span><h2 id="skills-title">Competenze</h2></div>
+      <div class="skills-list">
+        <div class="skill-row"><h3>Frontend</h3><p>Angular, TypeScript, JavaScript, React, Vue.js, RxJS/NgRx</p></div>
+        <div class="skill-row"><h3>Backend e dati</h3><p>Java, Spring, Python, FastAPI, SQL, MySQL, PostgreSQL, MongoDB</p></div>
+        <div class="skill-row"><h3>Artificial Intelligence</h3><p>Machine Learning, Deep Learning, LLM/RAG, PyTorch, TensorFlow</p></div>
+        <div class="skill-row"><h3>Delivery e cloud</h3><p>Docker, CI/CD, AWS, Nginx, Maven/Gradle, OpenAPI</p></div>
+      </div>
+      <p class="skills-note">L’elenco completo delle tecnologie è nel CV.</p>
+    </section>
 
-			.page {
-				max-width: 1180px;
-				margin: 0 auto;
-				padding: 32px 24px 80px;
-				display: flex;
-				flex-direction: column;
-				gap: 64px;
-			}
+    <section class="contact-section" id="contatti" aria-labelledby="contact-title">
+      <div class="section-head"><span class="section-number">04</span><h2 id="contact-title">Contatti</h2></div>
+      <p>Per opportunità professionali o collaborazioni:</p>
+      <a class="contact-email" href="mailto:criscioneg16@gmail.com">criscioneg16@gmail.com <span aria-hidden="true">↗</span></a>
+      <div class="contact-meta"><span>Pisa, Italia</span><a href="https://github.com/gcriscione" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/giovanni--criscione/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+    </section>
+  </main>
 
-			.nav {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				gap: 24px;
-				position: sticky;
-				top: 20px;
-				z-index: 5;
-				backdrop-filter: blur(12px);
-				background: rgba(246, 242, 234, 0.75);
-				border: 1px solid var(--border);
-				border-radius: 16px;
-				padding: 12px 18px;
-				box-shadow: 0 10px 30px rgba(28, 26, 24, 0.08);
-			}
-
-			.nav__logo {
-				font-family: "Fraunces", serif;
-				font-weight: 700;
-				letter-spacing: 0.5px;
-				text-transform: uppercase;
-				font-size: 0.95rem;
-			}
-
-			.nav__links {
-				display: flex;
-				gap: 18px;
-				flex-wrap: wrap;
-				font-size: 0.95rem;
-			}
-
-			.nav__cta {
-				padding: 8px 14px;
-				border-radius: 999px;
-				border: 1px solid var(--border);
-				background: var(--card);
-				font-weight: 600;
-				transition: transform 0.2s ease;
-			}
-
-			.nav__cta:hover {
-				transform: translateY(-2px);
-			}
-
-			.hero {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-				gap: 32px;
-				align-items: center;
-			}
-
-			.hero__eyebrow {
-				text-transform: uppercase;
-				letter-spacing: 2px;
-				font-size: 0.75rem;
-				color: var(--muted);
-			}
-
-			.hero__title {
-				font-family: "Fraunces", serif;
-				font-size: clamp(2.6rem, 5vw, 4.2rem);
-				margin: 12px 0 16px;
-			}
-
-			.hero__subtitle {
-				font-size: 1.1rem;
-				color: var(--muted);
-				line-height: 1.7;
-				max-width: 520px;
-			}
-
-			.hero__actions {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 12px;
-				margin-top: 24px;
-			}
-
-			.btn {
-				padding: 12px 18px;
-				border-radius: 12px;
-				border: 1px solid var(--border);
-				font-weight: 600;
-				display: inline-flex;
-				align-items: center;
-				gap: 8px;
-				transition: transform 0.2s ease, box-shadow 0.2s ease;
-			}
-
-			.btn--primary {
-				background: var(--accent);
-				color: #fffdf8;
-				border-color: transparent;
-			}
-
-			.btn--ghost {
-				background: var(--card);
-			}
-
-			.btn:hover {
-				transform: translateY(-2px);
-				box-shadow: 0 14px 25px rgba(28, 26, 24, 0.14);
-			}
-
-			.hero__card {
-				border-radius: 24px;
-				background: var(--card);
-				border: 1px solid var(--border);
-				padding: 28px;
-				box-shadow: var(--shadow);
-			}
-
-			.hero__card-grid {
-				display: grid;
-				gap: 18px;
-			}
-
-			.hero__stat {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				padding: 14px 16px;
-				border-radius: 14px;
-				background: #ffffff;
-				border: 1px solid rgba(215, 198, 176, 0.7);
-			}
-
-			.hero__stat span {
-				color: var(--muted);
-				font-size: 0.9rem;
-			}
-
-			.section-title {
-				display: flex;
-				align-items: center;
-				gap: 12px;
-				font-family: "Fraunces", serif;
-				font-size: 1.7rem;
-			}
-
-			.section-title::before {
-				content: "";
-				width: 32px;
-				height: 3px;
-				background: var(--accent);
-				border-radius: 99px;
-			}
-
-			.grid-3 {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-				gap: 22px;
-			}
-
-			.card {
-				background: var(--card);
-				border: 1px solid var(--border);
-				border-radius: 18px;
-				padding: 20px;
-				display: flex;
-				flex-direction: column;
-				gap: 14px;
-				box-shadow: 0 12px 30px rgba(28, 26, 24, 0.08);
-			}
-
-			.card__title {
-				font-weight: 600;
-				font-size: 1.1rem;
-			}
-
-			.card__meta {
-				color: var(--muted);
-				font-size: 0.95rem;
-			}
-
-			.tags {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 8px;
-			}
-
-			.tag {
-				padding: 6px 10px;
-				border-radius: 999px;
-				background: #ffffff;
-				border: 1px solid rgba(215, 198, 176, 0.7);
-				font-size: 0.8rem;
-			}
-
-			.timeline {
-				display: grid;
-				gap: 18px;
-			}
-
-			.timeline__item {
-				background: var(--card);
-				border-radius: 16px;
-				border: 1px solid var(--border);
-				padding: 18px;
-				display: grid;
-				gap: 8px;
-			}
-
-			.timeline__item strong {
-				font-weight: 600;
-			}
-
-			.split {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-				gap: 28px;
-			}
-
-			.skills {
-				display: grid;
-				gap: 14px;
-			}
-
-			.skills__row {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				background: #ffffff;
-				border: 1px solid rgba(215, 198, 176, 0.7);
-				border-radius: 12px;
-				padding: 10px 14px;
-			}
-
-			.skills__bar {
-				height: 6px;
-				background: rgba(31, 111, 139, 0.2);
-				border-radius: 999px;
-				overflow: hidden;
-				flex: 1;
-				margin-left: 12px;
-			}
-
-			.skills__bar span {
-				display: block;
-				height: 100%;
-				background: var(--accent-2);
-				border-radius: 999px;
-			}
-
-			.contact {
-				background: var(--ink);
-				color: #fdf7ed;
-				border-radius: 24px;
-				padding: 28px;
-				display: grid;
-				gap: 18px;
-			}
-
-			.contact__grid {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-				gap: 16px;
-			}
-
-			.contact__item {
-				border: 1px solid rgba(255, 255, 255, 0.2);
-				border-radius: 14px;
-				padding: 14px 16px;
-				background: rgba(255, 255, 255, 0.08);
-			}
-
-			.footer {
-				text-align: center;
-				color: var(--muted);
-				font-size: 0.85rem;
-			}
-
-			.reveal {
-				opacity: 0;
-				transform: translateY(16px);
-				transition: opacity 0.7s ease, transform 0.7s ease;
-			}
-
-			.reveal.is-visible {
-				opacity: 1;
-				transform: translateY(0);
-			}
-
-			@media (max-width: 720px) {
-				.nav {
-					position: static;
-				}
-
-				.hero__actions {
-					flex-direction: column;
-					align-items: flex-start;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<div class="page">
-			<nav class="nav">
-				<div class="nav__logo">Giovanni Criscione</div>
-				<div class="nav__links">
-					<a href="#progetti">Progetti</a>
-					<a href="#competenze">Competenze</a>
-					<a href="#esperienza">Esperienza</a>
-					<a href="#contatti">Contatti</a>
-				</div>
-				<a class="nav__cta" href="#contatti">Parliamone</a>
-			</nav>
-
-			<section class="hero reveal" id="top">
-				<div>
-					<div class="hero__eyebrow">Portfolio mockup 2026</div>
-					<h1 class="hero__title">
-						Product designer &amp; developer per esperienze digitali curate.
-					</h1>
-					<p class="hero__subtitle">
-						Creo interfacce, prototipi e sistemi di design che trasformano idee in
-						prodotti misurabili. Questo sito e un mock, pronto per GitHub Pages.
-					</p>
-					<div class="hero__actions">
-						<a class="btn btn--primary" href="#progetti">Vedi i progetti</a>
-						<a class="btn btn--ghost" href="#contatti">Scarica CV</a>
-					</div>
-				</div>
-				<div class="hero__card">
-					<div class="hero__card-grid">
-						<div class="hero__stat">
-							<strong>8+ anni</strong>
-							<span>Esperienza digitale</span>
-						</div>
-						<div class="hero__stat">
-							<strong>24 prodotti</strong>
-							<span>Rilasciati in team</span>
-						</div>
-						<div class="hero__stat">
-							<strong>3 mercati</strong>
-							<span>Fintech, retail, SaaS</span>
-						</div>
-						<div class="hero__stat">
-							<strong>15%+ ROI</strong>
-							<span>Media ottimizzazioni</span>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="reveal" id="progetti">
-				<div class="section-title">Progetti in evidenza</div>
-				<div class="grid-3">
-					<article class="card">
-						<div class="card__title">Atlas Pay - Mobile banking</div>
-						<div class="card__meta">Ruolo: Lead UX / UI</div>
-						<p>
-							Ridisegno completo dell'app con focus su onboarding e gestione
-							spese. Riduzione drop-off del 32% in 90 giorni.
-						</p>
-						<div class="tags">
-							<span class="tag">Research</span>
-							<span class="tag">Design system</span>
-							<span class="tag">iOS/Android</span>
-						</div>
-					</article>
-					<article class="card">
-						<div class="card__title">Northwind Ops - SaaS B2B</div>
-						<div class="card__meta">Ruolo: Product design</div>
-						<p>
-							Dashboard operativa per supply chain con KPI personalizzati e
-							alert predittivi. Adozione +41% in team enterprise.
-						</p>
-						<div class="tags">
-							<span class="tag">Dashboard</span>
-							<span class="tag">Data viz</span>
-							<span class="tag">Figma</span>
-						</div>
-					</article>
-					<article class="card">
-						<div class="card__title">Linea Studio - Ecommerce</div>
-						<div class="card__meta">Ruolo: Frontend + UX</div>
-						<p>
-							Restyling del funnel di checkout con micro-copy e bundle dinamici.
-							Aumento conversioni del 18%.
-						</p>
-						<div class="tags">
-							<span class="tag">Webflow</span>
-							<span class="tag">React</span>
-							<span class="tag">CRO</span>
-						</div>
-					</article>
-				</div>
-			</section>
-
-			<section class="reveal" id="competenze">
-				<div class="section-title">Competenze chiave</div>
-				<div class="split">
-					<div class="skills">
-						<div class="skills__row">
-							<strong>Product strategy</strong>
-							<div class="skills__bar"><span style="width: 90%"></span></div>
-						</div>
-						<div class="skills__row">
-							<strong>UX research</strong>
-							<div class="skills__bar"><span style="width: 82%"></span></div>
-						</div>
-						<div class="skills__row">
-							<strong>UI design</strong>
-							<div class="skills__bar"><span style="width: 88%"></span></div>
-						</div>
-						<div class="skills__row">
-							<strong>Frontend</strong>
-							<div class="skills__bar"><span style="width: 72%"></span></div>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card__title">Stack e strumenti</div>
-						<p class="card__meta">
-							Figma, FigJam, Webflow, Notion, React, Framer, Jira, Miro.
-						</p>
-						<p>
-							Creo prototipi ad alta fedelta, documentazione viva e collaboro con
-							team cross-funzionali per lanciare prodotti digitali.
-						</p>
-						<div class="tags">
-							<span class="tag">Design system</span>
-							<span class="tag">Service design</span>
-							<span class="tag">Workshop</span>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="reveal" id="esperienza">
-				<div class="section-title">Esperienza recente</div>
-				<div class="timeline">
-					<div class="timeline__item">
-						<strong>2024 - Oggi · Studio Arc</strong>
-						<span>Lead Product Designer</span>
-						<p>
-							Guida di un team di 4 designer, roadmap di prodotto e governance
-							del design system globale.
-						</p>
-					</div>
-					<div class="timeline__item">
-						<strong>2021 - 2024 · Nimbus Labs</strong>
-						<span>Senior UX Designer</span>
-						<p>
-							Focus su SaaS B2B: ricerche generative, prototipazione e mentoring
-							di junior designer.
-						</p>
-					</div>
-					<div class="timeline__item">
-						<strong>2018 - 2021 · Freelance</strong>
-						<span>Product &amp; Brand Designer</span>
-						<p>
-							Collaborazioni con startup europee su branding, siti web e app
-							mobile.
-						</p>
-					</div>
-				</div>
-			</section>
-
-			<section class="contact reveal" id="contatti">
-				<div class="section-title" style="color: inherit">Contatti</div>
-				<p>
-					Disponibile per consulenze, progetti di prodotto o partnership. Qui
-					sotto trovi i canali principali: sostituisci i dati con i tuoi reali.
-				</p>
-				<div class="contact__grid">
-					<div class="contact__item">
-						<strong>Email</strong>
-						<div>giovanni@email.com</div>
-					</div>
-					<div class="contact__item">
-						<strong>LinkedIn</strong>
-						<div>linkedin.com/in/giovannicriscione</div>
-					</div>
-					<div class="contact__item">
-						<strong>GitHub</strong>
-						<div>github.com/gcriscione</div>
-					</div>
-					<div class="contact__item">
-						<strong>Calendly</strong>
-						<div>calendly.com/giovanni</div>
-					</div>
-				</div>
-			</section>
-
-			<footer class="footer">
-				Mock portfolio per GitHub Pages · Ultimo aggiornamento Febbraio 2026
-			</footer>
-		</div>
-
-		<script>
-			const observer = new IntersectionObserver(
-				(entries) => {
-					entries.forEach((entry) => {
-						if (entry.isIntersecting) {
-							entry.target.classList.add("is-visible");
-							observer.unobserve(entry.target);
-						}
-					});
-				},
-				{ threshold: 0.15 }
-			);
-
-			document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-		</script>
-	</body>
+  <footer class="footer"><div class="wrap"><span>© <span id="year">2026</span> Giovanni Criscione</span><a href="#inizio">Torna su ↑</a></div></footer>
+</body>
 </html>
