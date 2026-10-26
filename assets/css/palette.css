@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Palette del sito: l'unico file da toccare per cambiare i colori.
+   1 Colori base · 2 Sfumature derivate · 3 Ruoli, tema chiaro · 4 Ruoli, tema scuro
+   Il resto dei CSS usa solo i nomi dei ruoli (sezioni 3 e 4), mai i colori diretti.
+   ========================================================================== */
+
+/* 1. Colori base ---------------------------------------------------------- */
+:root {
+  --lavender: #c5d1eb;
+  --powder-blue: #92afd7;
+  --blue-slate: #5a7684;
+  --granite: #395b50;
+
+  /* 2. Sfumature derivate dai colori base (per testo, sfondi e stati) ------ */
+  --granite-deep: #263f37;     /* granite scurito: hover del pulsante */
+  --granite-ink: #2b4840;      /* granite per testo su fondo chiaro evidenziato */
+  --ink-deep: #16242d;         /* titoli, tema chiaro */
+  --ink: #2b3f4b;              /* paragrafi, tema chiaro */
+  --slate-text: #50697a;       /* blue-slate scurito: testo piccolo, tema chiaro */
+  --lavender-wash: #f4f7fc;    /* lavender molto chiaro: sfondo pagina */
+  --lavender-soft: #e3e9f6;    /* lavender chiaro: riquadri evidenziati */
+  --lavender-line: #dae2f1;    /* lavender chiaro: divisori */
+  --powder-line: #7c9bc6;      /* powder-blue scurito: linee della rete, tema chiaro */
+
+  --night: #111b21;            /* sfondo pagina, tema scuro */
+  --night-raised: #19262e;     /* pulsanti e chip, tema scuro */
+  --night-green: #263d35;      /* granite scurito: riquadri evidenziati, tema scuro */
+  --night-line: #26353f;       /* divisori, tema scuro */
+  --night-line-mid: #33454f;   /* bordo chip, tema scuro */
+  --mist: #f1f5fc;             /* titoli, tema scuro */
+  --powder-text: #8fa9c4;      /* powder-blue attenuato: testo piccolo, tema scuro */
+  --mint: #d3e6dd;             /* testo sui riquadri verdi, tema scuro */
+  --spark: #e9effb;            /* impulsi della rete, tema scuro */
+}
+
+/* 3. Ruoli: tema chiaro (predefinito) ------------------------------------- */
+:root {
+  /* Superfici */
+  --bg: var(--lavender-wash);      /* sfondo pagina */
+  --surface: #ffffff;              /* pulsanti, chip */
+  --soft: var(--lavender-soft);    /* riquadri e pillole evidenziate */
+
+  /* Testo: tre livelli */
+  --text-strong: var(--ink-deep);  /* titoli, nome, email */
+  --text: var(--ink);              /* paragrafi */
+  --text-muted: var(--slate-text); /* date, didascalie, menu, footer */
+
+  /* Bordi: tre livelli */
+  --border: var(--lavender-line);  /* divisori */
+  --border-mid: var(--lavender);   /* chip, logo */
+  --border-strong: var(--blue-slate); /* controlli interattivi (contrasto 3:1) */
+
+  /* Accento */
+  --icon: var(--granite);          /* icone e punti elenco */
+  --accent: var(--granite);        /* testo evidenziato, focus, link al passaggio */
+  --on-soft: var(--granite-ink);   /* testo sopra --soft */
+
+  /* Pulsante principale */
+  --btn-bg: var(--granite);        --btn-ink: #ffffff;
+  --btn-hover-bg: var(--granite-deep); --btn-hover-ink: #ffffff;
+
+  /* Rete 3D */
+  --net-node: var(--blue-slate);   --net-line: var(--powder-line);   --net-pulse: var(--granite);
+}
+
+/* 4. Ruoli: tema scuro (sistema scuro senza scelta manuale, oppure scelta manuale)
+      Le due regole sotto devono restare identiche. -------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: var(--night); --surface: var(--night-raised); --soft: var(--night-green);
+    --text-strong: var(--mist); --text: var(--lavender); --text-muted: var(--powder-text);
+    --border: var(--night-line); --border-mid: var(--night-line-mid); --border-strong: var(--blue-slate);
+    --icon: var(--powder-blue); --accent: var(--powder-blue); --on-soft: var(--mint);
+    --btn-bg: var(--lavender); --btn-ink: var(--night); --btn-hover-bg: var(--powder-blue); --btn-hover-ink: var(--night);
+    --net-node: var(--lavender); --net-line: var(--powder-line); --net-pulse: var(--spark);
+  }
+}
+:root[data-theme="dark"] {
+  --bg: var(--night); --surface: var(--night-raised); --soft: var(--night-green);
+  --text-strong: var(--mist); --text: var(--lavender); --text-muted: var(--powder-text);
+  --border: var(--night-line); --border-mid: var(--night-line-mid); --border-strong: var(--blue-slate);
+  --icon: var(--powder-blue); --accent: var(--powder-blue); --on-soft: var(--mint);
+  --btn-bg: var(--lavender); --btn-ink: var(--night); --btn-hover-bg: var(--powder-blue); --btn-hover-ink: var(--night);
+  --net-node: var(--lavender); --net-line: var(--powder-line); --net-pulse: var(--spark);
+}

@@ -1,24 +1,46 @@
 (() => {
   const root = document.documentElement;
   const themeButton = document.getElementById("theme-toggle");
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
   const menuButton = document.getElementById("menu-toggle");
   const nav = document.getElementById("primary-nav");
   const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
-  let savedTheme = null;
-  try { savedTheme = localStorage.getItem("portfolio-theme"); } catch (_) {}
-  const setTheme = (theme, save = false) => {
+  const STORAGE_KEY = "portfolio-theme";
+  const BAR_COLOR = { light: "#f4f7fc", dark: "#111b21" }; // uguali a --bg in palette.css
+
+  // Tema: scelta salvata, altrimenti preferenza del sistema.
+  let saved = null;
+  try { saved = localStorage.getItem(STORAGE_KEY); } catch (_) {}
+
+  const applyTheme = (theme, persist = false) => {
     root.dataset.theme = theme;
     root.style.colorScheme = theme;
-    themeButton.setAttribute("aria-label", theme === "dark" ? "Attiva tema chiaro" : "Attiva tema scuro");
-    themeButton.querySelector("span").textContent = theme === "dark" ? "☀" : "◐";
-    if (save) { savedTheme = theme; try { localStorage.setItem("portfolio-theme", theme); } catch (_) {} }
+    const next = theme === "dark" ? "chiaro" : "scuro";
+    themeButton.setAttribute("aria-label", "Attiva tema " + next);
+    themeButton.setAttribute("title", "Attiva tema " + next);
+    if (themeMeta) themeMeta.content = BAR_COLOR[theme];
+    if (persist) {
+      saved = theme;
+      try { localStorage.setItem(STORAGE_KEY, theme); } catch (_) {}
+    }
   };
-  setTheme(savedTheme || (systemDark.matches ? "dark" : "light"));
-  themeButton.addEventListener("click", () => setTheme(root.dataset.theme === "dark" ? "light" : "dark", true));
-  systemDark.addEventListener("change", event => { if (!savedTheme) setTheme(event.matches ? "dark" : "light"); });
-  const closeMenu = () => { nav.classList.remove("is-open"); menuButton.setAttribute("aria-expanded", "false"); menuButton.setAttribute("aria-label", "Apri menu"); };
-  menuButton.addEventListener("click", () => { const open = menuButton.getAttribute("aria-expanded") !== "true"; nav.classList.toggle("is-open", open); menuButton.setAttribute("aria-expanded", String(open)); menuButton.setAttribute("aria-label", open ? "Chiudi menu" : "Apri menu"); });
-  nav.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
-  document.addEventListener("keydown", event => { if (event.key === "Escape") closeMenu(); });
+
+  applyTheme(root.dataset.theme || saved || (systemDark.matches ? "dark" : "light"));
+  themeButton.addEventListener("click", () => applyTheme(root.dataset.theme === "dark" ? "light" : "dark", true));
+  systemDark.addEventListener("change", event => { if (!saved) applyTheme(event.matches ? "dark" : "light"); });
+
+  // Menu mobile.
+  const setMenu = open => {
+    nav.classList.toggle("is-open", open);
+    menuButton.setAttribute("aria-expanded", String(open));
+    menuButton.setAttribute("aria-label", open ? "Chiudi menu" : "Apri menu");
+  };
+  menuButton.addEventListener("click", () => setMenu(menuButton.getAttribute("aria-expanded") !== "true"));
+  nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => setMenu(false)));
+  document.addEventListener("keydown", event => { if (event.key === "Escape") setMenu(false); });
+  document.addEventListener("click", event => {
+    if (!nav.contains(event.target) && !menuButton.contains(event.target)) setMenu(false);
+  });
+
   document.getElementById("year").textContent = new Date().getFullYear();
 })();

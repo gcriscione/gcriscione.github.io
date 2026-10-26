@@ -8,17 +8,48 @@
   <meta property="og:title" content="Giovanni Criscione | Full Stack Developer">
   <meta property="og:description" content="Esperienza, formazione, competenze e contatti di Giovanni Criscione.">
   <meta property="og:locale" content="it_IT">
-  <meta name="theme-color" content="#ffffff">
+  <meta property="og:url" content="https://gcriscione.github.io/">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://gcriscione.github.io/">
+  <meta name="theme-color" content="#f4f7fc">
   <title>Giovanni Criscione | Full Stack Developer</title>
-  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="./assets/images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">
+  <script>(function(){try{var t=localStorage.getItem("portfolio-theme");document.documentElement.dataset.theme=(t==="dark"||t==="light")?t:(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(e){}})()</script>
+  <link rel="stylesheet" href="./assets/css/palette.css">
   <link rel="stylesheet" href="./assets/css/styles.css">
   <script defer src="./assets/js/app.js"></script>
+  <script defer src="./assets/js/hero3d.js"></script>
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 5l0 14" /><path d="M18 11l-6 -6" /><path d="M6 11l6 -6" /></symbol>
+  <symbol id="i-brain" viewBox="0 0 24 24"><path d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8" /><path d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8" /><path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5" /><path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0" /><path d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5" /><path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10" /></symbol>
+  <symbol id="i-brand-docker" viewBox="0 0 24 24"><path d="M22 12.54c-1.804 -.345 -2.701 -1.08 -3.523 -2.94c-.487 .696 -1.102 1.568 -.92 2.4c.028 .238 -.32 1 -.557 1h-14c0 5.208 3.164 7 6.196 7c4.124 .022 7.828 -1.376 9.854 -5c1.146 -.101 2.296 -1.505 2.95 -2.46" /><path d="M5 10h3v3h-3l0 -3" /><path d="M8 10h3v3h-3l0 -3" /><path d="M11 10h3v3h-3l0 -3" /><path d="M8 7h3v3h-3l0 -3" /><path d="M11 7h3v3h-3l0 -3" /><path d="M11 4h3v3h-3l0 -3" /><path d="M4.571 18c1.5 0 2.047 -.074 2.958 -.78" /><path d="M10 16l0 .01" /></symbol>
+  <symbol id="i-brand-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></symbol>
+  <symbol id="i-brand-linkedin" viewBox="0 0 24 24"><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" /></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24"><path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -9" /><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" /><path d="M12 12l0 .01" /><path d="M3 13a20 20 0 0 0 18 0" /></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" /><path d="M7 11l5 5l5 -5" /><path d="M12 4l0 12" /></symbol>
+  <symbol id="i-layout-board-split" viewBox="0 0 24 24"><path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12" /><path d="M4 12h8" /><path d="M12 15h8" /><path d="M12 9h8" /><path d="M12 4v16" /></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" /><path d="M3 7l9 6l9 -6" /></symbol>
+  <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0" /></symbol>
+  <symbol id="i-menu-2" viewBox="0 0 24 24"><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008" /></symbol>
+  <symbol id="i-school" viewBox="0 0 24 24"><path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" /><path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" /></symbol>
+  <symbol id="i-server-2" viewBox="0 0 24 24"><path d="M3 7a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-2" /><path d="M3 15a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3l0 -2" /><path d="M7 8l0 .01" /><path d="M7 16l0 .01" /><path d="M11 8h6" /><path d="M11 16h6" /></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><path d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></symbol>
+</svg>
   <a class="skip-link" href="#contenuto">Vai al contenuto</a>
-  <header class="site-header" id="inizio">
+
+  <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="#inizio" aria-label="Giovanni Criscione, inizio pagina">GC<span>.</span></a>
+      <a class="brand" href="#inizio" aria-label="Giovanni Criscione, inizio pagina">
+        <img class="logo" src="./assets/images/logo-gc.png" alt="" width="40" height="40">
+        <span>Giovanni Criscione</span>
+      </a>
       <nav class="nav" id="primary-nav" aria-label="Sezioni del portfolio">
         <a href="#esperienza">Esperienza</a>
         <a href="#formazione">Formazione</a>
@@ -26,61 +57,151 @@
         <a href="#contatti">Contatti</a>
       </nav>
       <div class="header-actions">
-        <button class="icon-button" id="theme-toggle" type="button" aria-label="Attiva tema scuro" title="Cambia tema"><span aria-hidden="true">◐</span></button>
-        <button class="icon-button menu-button" id="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Apri menu"><span aria-hidden="true">☰</span></button>
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Attiva tema scuro" title="Cambia tema">
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        </button>
+        <button class="icon-button menu-button" id="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Apri menu">
+          <svg class="icon icon-menu" aria-hidden="true"><use href="#i-menu-2"/></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="#i-x"/></svg>
+        </button>
       </div>
     </div>
   </header>
 
-  <main class="wrap" id="contenuto">
-    <section class="intro" aria-labelledby="intro-title">
-      <p class="eyebrow">FULL STACK DEVELOPER <span aria-hidden="true">·</span> PISA, ITALIA</p>
-      <h1 id="intro-title">Giovanni Criscione<span>.</span></h1>
-      <p class="intro-lead">Sviluppo applicazioni web, dall’interfaccia al rilascio in produzione.</p>
-      <p class="intro-detail">Laureato magistrale in Artificial Intelligence all’Università di Pisa. Ho maturato tre anni di esperienza IT parallelamente agli studi e oggi lavoro come Full Stack Developer in Meew.</p>
-      <div class="intro-actions">
-        <a class="button button-primary" href="mailto:criscioneg16@gmail.com">Scrivimi <span aria-hidden="true">↗</span></a>
-        <a class="button button-secondary" href="./documents/Giovanni_Criscione_CV.pdf" download>Scarica il CV <span aria-hidden="true">↓</span></a>
-      </div>
-      <div class="intro-links"><a href="https://github.com/gcriscione" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/giovanni--criscione/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
-    </section>
-
-    <section class="content-section" id="esperienza" aria-labelledby="experience-title">
-      <div class="section-head"><span class="section-number">01</span><h2 id="experience-title">Esperienza</h2></div>
-      <div class="entry-list">
-        <article class="entry"><div class="entry-date">2023 — oggi</div><div><h3>Full Stack Developer <span>· Meew</span></h3><p>Sviluppo e manutenzione di applicazioni web con Angular, TypeScript, Java e Spring. Integrazione frontend/backend, CI/CD e deployment, in collaborazione con team e clienti.</p></div></article>
-        <article class="entry"><div class="entry-date">2020 — 2024</div><div><h3>Sviluppatore web indipendente</h3><p>Siti e applicazioni web per clienti privati e progetti personali, gestiti in autonomia.</p></div></article>
-      </div>
-    </section>
-
-    <section class="content-section" id="formazione" aria-labelledby="education-title">
-      <div class="section-head"><span class="section-number">02</span><h2 id="education-title">Formazione</h2></div>
-      <div class="entry-list">
-        <article class="entry"><div class="entry-date">2023 — 2026</div><div><h3>Laurea magistrale in Artificial Intelligence</h3><p>Università di Pisa · Percorso in inglese, completato parallelamente all’attività professionale.</p></div></article>
-        <article class="entry"><div class="entry-date">2020 — 2023</div><div><h3>Laurea triennale in Informatica</h3><p>Università di Pisa · Tirocinio e tesi su una web app per la contabilità aziendale.</p></div></article>
-        <article class="entry"><div class="entry-date">2015 — 2020</div><div><h3>Diploma di Perito Informatico</h3><p>ITIS Galileo Ferraris, Ragusa.</p></div></article>
+  <main id="contenuto">
+    <section class="hero" id="inizio" aria-labelledby="intro-title">
+      <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <div class="hero-name">
+            <img class="avatar" src="./assets/images/avatar-192.webp" width="192" height="192" alt="Giovanni Criscione con la corona d’alloro" fetchpriority="high">
+            <h1 id="intro-title">Giovanni Criscione</h1>
+          </div>
+          <p class="hero-role">Full stack developer a Pisa</p>
+          <p class="hero-lead">Sviluppo applicazioni web, dall’interfaccia al rilascio in produzione.</p>
+          <p class="hero-detail">Mi sono laureato in Artificial Intelligence all’Università di Pisa mentre lavoravo nel settore IT. Oggi sono in Meew, società di consulenza informatica, dove sviluppo con Angular e Spring e seguo CI/CD e rilasci insieme ai clienti.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="mailto:criscioneg16@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Scrivimi</a>
+            <a class="button" href="./documents/Giovanni_Criscione_CV.pdf" download><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Scarica il CV</a>
+          </div>
+          <ul class="hero-links">
+            <li><a class="icon-button" href="https://github.com/gcriscione" target="_blank" rel="noopener noreferrer" aria-label="GitHub (si apre in una nuova scheda)" title="GitHub"><svg class="icon" aria-hidden="true"><use href="#i-brand-github"/></svg></a></li>
+            <li><a class="icon-button" href="https://www.linkedin.com/in/giovanni--criscione/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (si apre in una nuova scheda)" title="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-brand-linkedin"/></svg></a></li>
+            <li class="hero-place"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"/></svg>Pisa, Italia</li>
+          </ul>
+        </div>
+        <div class="hero-visual" id="hero-visual" aria-hidden="true"></div>
       </div>
     </section>
 
-    <section class="content-section" id="competenze" aria-labelledby="skills-title">
-      <div class="section-head"><span class="section-number">03</span><h2 id="skills-title">Competenze</h2></div>
-      <div class="skills-list">
-        <div class="skill-row"><h3>Frontend</h3><p>Angular, TypeScript, JavaScript, React, Vue.js, RxJS/NgRx</p></div>
-        <div class="skill-row"><h3>Backend e dati</h3><p>Java, Spring, Python, FastAPI, SQL, MySQL, PostgreSQL, MongoDB</p></div>
-        <div class="skill-row"><h3>Artificial Intelligence</h3><p>Machine Learning, Deep Learning, LLM/RAG, PyTorch, TensorFlow</p></div>
-        <div class="skill-row"><h3>Delivery e cloud</h3><p>Docker, CI/CD, AWS, Nginx, Maven/Gradle, OpenAPI</p></div>
+    <section class="section" id="esperienza" aria-labelledby="experience-title">
+      <div class="wrap section-grid">
+        <h2 id="experience-title"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg>Esperienza</h2>
+        <div class="section-body">
+          <article class="entry">
+            <header class="entry-head">
+              <h3>Full Stack Developer<span class="org">Meew</span></h3>
+              <p class="entry-date">2023 – oggi</p>
+            </header>
+            <ul class="entry-points">
+              <li>Sviluppo e manutenzione di applicazioni web con Angular e Spring.</li>
+              <li>Gestione di pipeline CI/CD e dei processi di deployment e rilascio in produzione.</li>
+              <li>Collaborazione con team e clienti durante tutto il ciclo di sviluppo.</li>
+            </ul>
+          </article>
+          <article class="entry">
+            <header class="entry-head">
+              <h3>Sviluppatore web indipendente</h3>
+              <p class="entry-date">2020 – 2024</p>
+            </header>
+            <p class="entry-text">Siti e applicazioni web per clienti privati e progetti personali, gestiti in autonomia: da qui sono cresciute le mie competenze full stack.</p>
+          </article>
+        </div>
       </div>
-      <p class="skills-note">L’elenco completo delle tecnologie è nel CV.</p>
     </section>
 
-    <section class="contact-section" id="contatti" aria-labelledby="contact-title">
-      <div class="section-head"><span class="section-number">04</span><h2 id="contact-title">Contatti</h2></div>
-      <p>Per opportunità professionali o collaborazioni:</p>
-      <a class="contact-email" href="mailto:criscioneg16@gmail.com">criscioneg16@gmail.com <span aria-hidden="true">↗</span></a>
-      <div class="contact-meta"><span>Pisa, Italia</span><a href="https://github.com/gcriscione" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/giovanni--criscione/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+    <section class="section" id="formazione" aria-labelledby="education-title">
+      <div class="wrap section-grid">
+        <h2 id="education-title"><svg class="icon" aria-hidden="true"><use href="#i-school"/></svg>Formazione</h2>
+        <div class="section-body">
+          <article class="entry">
+            <header class="entry-head">
+              <h3>Laurea magistrale in Artificial Intelligence<span class="grade">103/110</span></h3>
+              <p class="entry-date">2023 – 2026</p>
+            </header>
+            <p class="entry-org">Università di Pisa</p>
+            <p class="entry-text">Percorso interamente in inglese, completato parallelamente al lavoro nel settore IT.</p>
+            <p class="note"><strong>Tesi</strong> Adaptive Java Unit Test Generation with LLMs and Multi-Armed Bandits</p>
+          </article>
+          <article class="entry">
+            <header class="entry-head">
+              <h3>Laurea triennale in Informatica<span class="grade">101/110</span></h3>
+              <p class="entry-date">2020 – 2023</p>
+            </header>
+            <p class="entry-org">Università di Pisa</p>
+            <p class="entry-text">Conclusa in anticipo rispetto ai tre anni. Tirocinio in un’azienda di sviluppo web e tesi su un’applicazione web per la contabilità aziendale.</p>
+          </article>
+          <article class="entry">
+            <header class="entry-head">
+              <h3>Diploma di Perito Informatico<span class="grade">98/100</span></h3>
+              <p class="entry-date">2015 – 2020</p>
+            </header>
+            <p class="entry-org">ITIS Galileo Ferraris, Ragusa</p>
+            <p class="entry-text">Programmazione, sviluppo software, database, reti e sistemi informativi.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="competenze" aria-labelledby="skills-title">
+      <div class="wrap section-grid">
+        <h2 id="skills-title"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>Competenze</h2>
+        <div class="section-body">
+          <p class="skills-key"><span class="chip chip-main" aria-hidden="true">Evidenziate</span> le tecnologie che uso di più.</p>
+          <dl class="skills">
+            <div class="skill-group"><dt><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>Linguaggi</dt><dd><ul class="chips">
+              <li class="chip chip-main">Java</li><li class="chip chip-main">TypeScript</li><li class="chip chip-main">SQL</li><li class="chip">Python</li><li class="chip">JavaScript</li><li class="chip">C/C++</li><li class="chip">PHP</li><li class="chip">OCaml</li><li class="chip">Assembly ARMv7</li>
+            </ul></dd></div>
+            <div class="skill-group"><dt><svg class="icon" aria-hidden="true"><use href="#i-layout-board-split"/></svg>Framework e web</dt><dd><ul class="chips">
+              <li class="chip chip-main">Angular</li><li class="chip chip-main">Spring</li><li class="chip">React</li><li class="chip">Vue.js</li><li class="chip">FastAPI</li><li class="chip">Flask</li><li class="chip">Django</li><li class="chip">RxJS/NgRx</li><li class="chip">PWA</li>
+            </ul></dd></div>
+            <div class="skill-group"><dt><svg class="icon" aria-hidden="true"><use href="#i-server-2"/></svg>Database e cloud</dt><dd><ul class="chips">
+              <li class="chip">MySQL</li><li class="chip">PostgreSQL</li><li class="chip">MongoDB</li><li class="chip">Firebase</li><li class="chip">AWS</li>
+            </ul></dd></div>
+            <div class="skill-group"><dt><svg class="icon" aria-hidden="true"><use href="#i-brand-docker"/></svg>DevOps e strumenti</dt><dd><ul class="chips">
+              <li class="chip">Docker</li><li class="chip">CI/CD</li><li class="chip">Nginx</li><li class="chip">Maven/Gradle</li><li class="chip">SonarQube</li><li class="chip">Postman</li><li class="chip">OpenAPI</li>
+            </ul></dd></div>
+            <div class="skill-group"><dt><svg class="icon" aria-hidden="true"><use href="#i-brain"/></svg>Artificial Intelligence</dt><dd><ul class="chips">
+              <li class="chip">Machine Learning</li><li class="chip">Deep Learning</li><li class="chip">LLM/RAG</li><li class="chip">Scikit-learn</li><li class="chip">TensorFlow</li><li class="chip">PyTorch</li><li class="chip">Hugging Face</li>
+            </ul></dd></div>
+          </dl>
+          <p class="skills-languages"><strong>Lingue</strong>Italiano madrelingua, inglese B2, spagnolo A2</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contatti" aria-labelledby="contact-title">
+      <div class="wrap section-grid">
+        <h2 id="contact-title"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Contatti</h2>
+        <div class="section-body">
+          <p class="contact-intro">Per opportunità professionali o collaborazioni, scrivimi.</p>
+          <a class="contact-email" href="mailto:criscioneg16@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>criscioneg16@gmail.com</a>
+          <ul class="contact-links">
+            <li><a href="https://github.com/gcriscione" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-brand-github"/></svg>GitHub<svg class="icon icon-ext" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/giovanni--criscione/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-brand-linkedin"/></svg>LinkedIn<svg class="icon icon-ext" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></li>
+            <li class="contact-place"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"/></svg>Pisa, Italia</li>
+          </ul>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="wrap"><span>© <span id="year">2026</span> Giovanni Criscione</span><a href="#inizio">Torna su ↑</a></div></footer>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© <span id="year">2026</span> Giovanni Criscione</span>
+      <a href="#inizio">Torna su<svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg></a>
+    </div>
+  </footer>
 </body>
 </html>
