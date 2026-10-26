@@ -114,17 +114,33 @@
     spin += dt * 0.1;
     rotY += (spin + target.y - rotY) * Math.min(1, dt * 3);
     rotX += (target.x - rotX) * Math.min(1, dt * 3);
-    pulses.forEach(p => {
+    for (let i = pulses.length - 1; i >= 0; i--) {
+      const p = pulses[i];
       p.t += dt * 0.7;
-      if (p.t < 1) return;
+      if (p.t < 1) continue;
       const node = p.dir > 0 ? edges[p.e].b : edges[p.e].a;
+      if (p.life !== undefined && --p.life <= 0) { pulses.splice(i, 1); continue; } // impulsi extra: si spengono dopo qualche salto
       const options = adj[node].filter(e => e !== p.e);
-      if (!options.length || rand() < 0.12) { Object.assign(p, newPulse(), { t: 0 }); return; }
+      if (!options.length || (p.life === undefined && rand() < 0.12)) {
+        if (p.life !== undefined) pulses.splice(i, 1); else Object.assign(p, newPulse(), { t: 0 });
+        continue;
+      }
       const next = options[Math.floor(rand() * options.length)];
       p.dir = edges[next].a === node ? 1 : -1;
       p.e = next;
       p.t = 0;
+    }
+  };
+
+  // Impulsi extra: partono da un nodo lungo tutte le sue connessioni e si spengono dopo `hops` salti.
+  const MAX_PULSES = 30;
+  const spawnFrom = (node, hops) => {
+    adj[node].forEach(e => {
+      if (pulses.length < MAX_PULSES) pulses.push({ e, t: 0, dir: edges[e].a === node ? 1 : -1, life: hops });
     });
+  };
+  const burst = (count, hops) => {
+    for (let i = 0; i < count; i++) spawnFrom(Math.floor(Math.random() * nodes.length), hops);
   };
 
   const frame = now => {
@@ -183,8 +199,28 @@
   window.addEventListener("load", resize);
   document.addEventListener("visibilitychange", sync);
   reduceMotion.addEventListener("change", sync);
-  new MutationObserver(() => { readColors(); if (!running) draw(); })
-    .observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+  // Cambio tema: nuovi colori e una raffica di impulsi.
+  let lastTheme = root.dataset.theme;
+  new MutationObserver(() => {
+    readColors();
+    if (root.dataset.theme !== lastTheme) { lastTheme = root.dataset.theme; if (running) burst(4, 5); }
+    if (!running) draw();
+  }).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+
+  // Click sulla rete: il nodo più vicino spedisce impulsi lungo le sue connessioni.
+  if (areaEl) {
+    areaEl.addEventListener("click", event => {
+      if (!running) return;
+      const r = canvas.getBoundingClientRect();
+      const x = event.clientX - r.left, y = event.clientY - r.top;
+      let best = 0, bestD = Infinity;
+      for (let i = 0; i < nodes.length; i++) {
+        const d = (px[i] - x) ** 2 + (py[i] - y) ** 2;
+        if (d < bestD) { bestD = d; best = i; }
+      }
+      spawnFrom(best, 6);
+    });
+  }
 
   readColors();
   build();

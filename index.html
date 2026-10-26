@@ -43,6 +43,7 @@
   <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></symbol>
 </svg>
   <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+  <div class="progress" id="progress" aria-hidden="true" hidden><span></span></div>
 
   <header class="site-header">
     <div class="wrap header-inner">
@@ -75,11 +76,21 @@
       <div class="wrap hero-grid">
         <div class="hero-text">
           <div class="hero-name">
-            <img class="avatar" src="./assets/images/avatar-192.webp" width="192" height="192" alt="Giovanni Criscione con la corona d’alloro" fetchpriority="high">
+            <div class="avatar-wrap">
+              <button class="avatar-button" id="avatar-button" type="button" aria-label="Foto di Giovanni Criscione: mostra la foto intera">
+                <img class="avatar" src="./assets/images/avatar-192.webp" width="192" height="192" alt="" fetchpriority="high">
+              </button>
+              <div class="avatar-pop">
+                <div class="avatar-card">
+                  <img src="./assets/images/portrait-480.webp" width="480" height="600" alt="Giovanni Criscione con la corona d’alloro e la copia della tesi di laurea magistrale" loading="lazy" decoding="async">
+                  <p>Eccomi per intero</p>
+                </div>
+              </div>
+            </div>
             <h1 id="intro-title">Giovanni Criscione</h1>
           </div>
           <p class="hero-role">Full stack developer a Pisa</p>
-          <p class="hero-lead">Sviluppo applicazioni web, dall’interfaccia al rilascio in produzione.</p>
+          <p class="hero-lead">Sviluppo applicazioni web & Magistrale in AI</p>
           <p class="hero-detail">Mi sono laureato in Artificial Intelligence all’Università di Pisa mentre lavoravo nel settore IT. Oggi sono in Meew, società di consulenza informatica, dove sviluppo con Angular e Spring e seguo CI/CD e rilasci insieme ai clienti.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="mailto:criscioneg16@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Scrivimi</a>
